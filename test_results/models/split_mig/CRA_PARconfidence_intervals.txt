@@ -1,0 +1,22 @@
+Optimized parameters: [0.01764773 0.03500975 0.02023732 0.01003378]
+
+================Default Uncertainty Analysis================Estimated 95% uncerts (with step size 0.1): [nan nan nan nan]
+Lower bounds of 95% confidence interval : [nan nan nan nan]
+Upper bounds of 95% confidence interval : [nan nan nan nan]
+
+================Default Uncertainty Analysis================Estimated 95% uncerts (with step size 0.01): [nan nan nan nan]
+Lower bounds of 95% confidence interval : [nan nan nan nan]
+Upper bounds of 95% confidence interval : [nan nan nan nan]
+
+================Default Uncertainty Analysis================Estimated 95% uncerts (with step size 0.001): [nan nan nan nan]
+Lower bounds of 95% confidence interval : [nan nan nan nan]
+Upper bounds of 95% confidence interval : [nan nan nan nan]
+
+================Default Uncertainty Analysis================Estimated 95% uncerts (with step size 0.0001): [nan nan nan nan]
+Lower bounds of 95% confidence interval : [nan nan nan nan]
+Upper bounds of 95% confidence interval : [nan nan nan nan]
+
+================Default Uncertainty Analysis================Estimated 95% uncerts (with step size 1e-05): [7.69676077e-11 1.52175347e-10 8.20251440e-11            nan]
+Lower bounds of 95% confidence interval : [0.01764773 0.03500975 0.02023732        nan]
+Upper bounds of 95% confidence interval : [0.01764773 0.03500975 0.02023732        nan]
+
