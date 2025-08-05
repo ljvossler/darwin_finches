@@ -15,7 +15,7 @@ module load samtools/1.19.2
 OUTDIR=/xdisk/mcnew/finches/ljvossler/finches    # main directory for output files
 PROGDIR=/xdisk/mcnew/finches/ljvossler/programs  # path to directory for all installed programs
 BAMDIR=/path/to/bam/files
-PROJHUB=darwin_finches/Genomics-Main
+PROJHUB=darwin_finches
 SCRIPTDIR=${OUTDIR}/${PROJHUB}
 PATH=$PATH:$SCRIPTDIR # this adds the workshop script directory to our path, so that executable scripts in it can be called without using the full path
 PATH=$PATH:$PROGDIR # Also adding program directory to path
@@ -31,4 +31,4 @@ GFF=/path/to/reference/genome/gff/genomic.gff # path to gff file
 # define the path for the chromosome conversion file (converts chromosome ascension names to numbers)
 CHR_FILE=/xdisk/mcnew/dannyjackson/cardinals/referencelists/GCF_901933205_chromconversion.txt
 
-source /path/to/base_setup.sh
+source /xdisk/mcnew/finches/ljvossler/finches/base_setup.sh
