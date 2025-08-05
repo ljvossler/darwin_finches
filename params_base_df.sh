@@ -31,4 +31,4 @@ GFF=/path/to/reference/genome/gff/genomic.gff # path to gff file
 # define the path for the chromosome conversion file (converts chromosome ascension names to numbers)
 CHR_FILE=/xdisk/mcnew/dannyjackson/cardinals/referencelists/GCF_901933205_chromconversion.txt
 
-source /xdisk/mcnew/finches/ljvossler/finches/darwin_finches/base_setup.sh
+source /xdisk/mcnew/finches/ljvossler/finches/darwin_finches/base_setup_df.sh
