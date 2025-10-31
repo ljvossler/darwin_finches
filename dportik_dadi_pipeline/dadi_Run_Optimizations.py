@@ -256,15 +256,15 @@ pts = [50,60,70]
 n = fs.sample_sizes
 #pts = [max(n)+20, max(n)+30, max(n)+40]
 
-p_labels = "nu1, nu2, T"
-upper = [20,20,15]
-lower = [0.01,0.03,0.1]
+p_labels = "nu, T"
+upper = [20,15]
+lower = [0.01,0.1]
 reps = [10,20,50]
 maxiters = [5,10,20]
 folds = [3,2,1]
 
 for i in range(1,6):
     prefix = "V6_Number_{}".format(i)
-    Optimize_Functions.Optimize_Routine(fs, pts, prefix, "bottlegrowth_1d", dadi.Demographics1D.bottlegrowth_1d, 3, 3, fs_folded=True,
+    Optimize_Functions.Optimize_Routine(fs, pts, prefix, "two_epoch", dadi.Demographics1D.two_epoch, 3, 2, fs_folded=True,
                                             param_labels = p_labels, in_upper=upper, in_lower=lower,
                                             reps = reps, maxiters = maxiters, folds = folds)
