@@ -85,12 +85,12 @@ import dill as pkl
 #dd = dadi.Misc.make_data_dict_vcf(vcf, popfile)
 if os.path.exists('cra_post_dd.pkl'):
     print('Data Dictionary .pkl file found in result directory. Loading this file into job...')
-    with open('cra_post_dd.pkl', 'rb') as file:
+    with open('for_post_dd.pkl', 'rb') as file:
         dd = pkl.load(file)
 
 #**************
 #pop_ids is a list which should match the populations headers of your SNPs file columns
-pop_ids=["CRA_post"]
+pop_ids=["FOR_post"]
 
 #**************
 #projection sizes, in ALLELES not individuals
@@ -256,15 +256,15 @@ pts = [50,60,70]
 n = fs.sample_sizes
 #pts = [max(n)+20, max(n)+30, max(n)+40]
 
-p_labels = "nu, T"
-upper = [20,15]
-lower = [0.01,0.1]
+p_labels = "nu1, nu2, T"
+upper = [20,20, 15]
+lower = [0.01, 0.01, 0.1]
 reps = [10,20,50]
 maxiters = [5,10,20]
 folds = [3,2,1]
 
 for i in range(1,6):
-    prefix = "CRA_post_V1_Number_{}".format(i)
-    Optimize_Functions.Optimize_Routine(fs, pts, prefix, "two_epoch", dadi.Demographics1D.two_epoch, 3, 2, fs_folded=True,
+    prefix = "FOR_post_V1_Number_{}".format(i)
+    Optimize_Functions.Optimize_Routine(fs, pts, prefix, "bottlegrowth_1d", dadi.Demographics1D.bottlegrowth_1d, 3, 3, fs_folded=True,
                                             param_labels = p_labels, in_upper=upper, in_lower=lower,
                                             reps = reps, maxiters = maxiters, folds = folds)
