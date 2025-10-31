@@ -265,6 +265,6 @@ folds = [3,2,1]
 
 for i in range(1,6):
     prefix = "V5_Number_{}".format(i)
-    Optimize_Functions.Optimize_Routine(fs, pts, prefix, "sym_mig", sym_mig, 3, 4, fs_folded=True,
+    Optimize_Functions.Optimize_Routine(fs, pts, prefix, "bottlegrowth_1d", dadi.Demographics1D.bottlegrowth_1d, 3, 4, fs_folded=True,
                                             param_labels = p_labels, in_upper=upper, in_lower=lower,
                                             reps = reps, maxiters = maxiters, folds = folds)
