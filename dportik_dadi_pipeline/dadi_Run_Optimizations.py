@@ -71,17 +71,22 @@ import numpy
 import dadi
 from datetime import datetime
 import Optimize_Functions
+import dill as pkl
 
 #===========================================================================
 # Import data to create joint-site frequency spectrum
 #===========================================================================
 
 #**************
-vcf = "/xdisk/mcnew/finches/ljvossler/finches/dadi/vcfs/cra_all_qualitysort.vcf"
-popfile = '/xdisk/mcnew/finches/ljvossler/finches/dadi/vcfs/cra_pre_pops.txt'
+#vcf = "/xdisk/mcnew/finches/ljvossler/finches/dadi/vcfs/cra_all_qualitysort.vcf"
+#popfile = '/xdisk/mcnew/finches/ljvossler/finches/dadi/vcfs/cra_pre_pops.txt'
 
 #Create python dictionary from snps file
-dd = dadi.Misc.make_data_dict_vcf(vcf, popfile)
+#dd = dadi.Misc.make_data_dict_vcf(vcf, popfile)
+if os.path.exists('cra_pre_dd.pkl'):
+    print('Data Dictionary .pkl file found in result directory. Loading this file into job...')
+    with open('cra_pre_dd.pkl', 'rb') as file:
+        dd = pkl.load(file)
 
 #**************
 #pop_ids is a list which should match the populations headers of your SNPs file columns
