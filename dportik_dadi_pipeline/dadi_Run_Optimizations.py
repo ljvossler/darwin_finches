@@ -83,18 +83,18 @@ import dill as pkl
 
 #Create python dictionary from snps file
 #dd = dadi.Misc.make_data_dict_vcf(vcf, popfile)
-if os.path.exists('cra_pre_dd.pkl'):
+if os.path.exists('cra_post_dd.pkl'):
     print('Data Dictionary .pkl file found in result directory. Loading this file into job...')
-    with open('cra_pre_dd.pkl', 'rb') as file:
+    with open('cra_post_dd.pkl', 'rb') as file:
         dd = pkl.load(file)
 
 #**************
 #pop_ids is a list which should match the populations headers of your SNPs file columns
-pop_ids=["CRA_pre"]
+pop_ids=["CRA_post"]
 
 #**************
 #projection sizes, in ALLELES not individuals
-proj = [10]
+proj = [18]
 
 #Convert this dictionary into folded AFS object
 #[polarized = False] creates folded spectrum object
@@ -264,7 +264,7 @@ maxiters = [5,10,20]
 folds = [3,2,1]
 
 for i in range(1,6):
-    prefix = "V6_Number_{}".format(i)
+    prefix = "CRA_post_V1_Number_{}".format(i)
     Optimize_Functions.Optimize_Routine(fs, pts, prefix, "two_epoch", dadi.Demographics1D.two_epoch, 3, 2, fs_folded=True,
                                             param_labels = p_labels, in_upper=upper, in_lower=lower,
                                             reps = reps, maxiters = maxiters, folds = folds)
