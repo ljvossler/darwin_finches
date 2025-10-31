@@ -256,9 +256,9 @@ That's why I have written a range of 1-6 to perform this 5 times.
 n = fs.sample_sizes
 pts = [max(n)+20, max(n)+30, max(n)+40]
 
-p_labels = "nu1, nu2, m, T"
-upper = [20,20,10,15]
-lower = [0.01,0.01,0.01,0.1]
+p_labels = "nu1, nu2, T"
+upper = [20,20,15]
+lower = [0.01,0.01,0.1]
 reps = [10,20,50]
 maxiters = [5,10,20]
 folds = [3,2,1]
