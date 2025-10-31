@@ -78,9 +78,10 @@ import Optimize_Functions
 
 #**************
 vcf = "/xdisk/mcnew/finches/ljvossler/finches/dadi/vcfs/cra_all_qualitysort.vcf"
+popfile = '/xdisk/mcnew/finches/ljvossler/finches/dadi/vcfs/cra_pre_pops.txt'
 
 #Create python dictionary from snps file
-dd = dadi.Misc.make_data_dict_vcf(vcf)
+dd = dadi.Misc.make_data_dict_vcf(vcf, popfile)
 
 #**************
 #pop_ids is a list which should match the populations headers of your SNPs file columns
