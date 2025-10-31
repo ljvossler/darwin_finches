@@ -1,3 +1,6 @@
 [submodule "Genomics-Main"]
 	path = Genomics-Main
 	url = git@github.com:dannyjackson/Genomics-Main.git
+[submodule "dadi_pipeline"]
+	path = dadi_pipeline
+	url = https://github.com/dportik/dadi_pipeline.git
