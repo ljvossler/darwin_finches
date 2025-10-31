@@ -83,7 +83,7 @@ import dill as pkl
 
 #Create python dictionary from snps file
 #dd = dadi.Misc.make_data_dict_vcf(vcf, popfile)
-if os.path.exists('cra_post_dd.pkl'):
+if os.path.exists('for_post_dd.pkl'):
     print('Data Dictionary .pkl file found in result directory. Loading this file into job...')
     with open('for_post_dd.pkl', 'rb') as file:
         dd = pkl.load(file)
@@ -94,7 +94,7 @@ pop_ids=["FOR_post"]
 
 #**************
 #projection sizes, in ALLELES not individuals
-proj = [18]
+proj = [16]
 
 #Convert this dictionary into folded AFS object
 #[polarized = False] creates folded spectrum object
