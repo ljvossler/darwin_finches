@@ -251,10 +251,10 @@ on which point we are at, and include it within the loops. Note that when you us
 the range argument in python it will go up to, but not include, the final number.
 That's why I have written a range of 1-6 to perform this 5 times.
 '''
-#pts = [50,60,70]
+pts = [50,60,70]
 
 n = fs.sample_sizes
-pts = [max(n)+20, max(n)+30, max(n)+40]
+#pts = [max(n)+20, max(n)+30, max(n)+40]
 
 p_labels = "nu1, nu2, T"
 upper = [20,20,15]
@@ -264,7 +264,7 @@ maxiters = [5,10,20]
 folds = [3,2,1]
 
 for i in range(1,6):
-    prefix = "V5_Number_{}".format(i)
+    prefix = "V6_Number_{}".format(i)
     Optimize_Functions.Optimize_Routine(fs, pts, prefix, "bottlegrowth_1d", dadi.Demographics1D.bottlegrowth_1d, 3, 3, fs_folded=True,
                                             param_labels = p_labels, in_upper=upper, in_lower=lower,
                                             reps = reps, maxiters = maxiters, folds = folds)
