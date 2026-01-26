@@ -1,0 +1,52 @@
+# (GONE v2.0)
+# Command: ./gone2 -g 0 -r 3.1 -i 5 -t 4 -o cra_post -x ../input_run1/cra_post/gone_input/cra_post.ped
+# Running time:145.413sec
+#
+# PREPROCESSING INFORMATION:
+# Temporal Ne estimation using unphased diploid data under the assumption of
+#   a metapopulation model with panmixia within subpopulations.
+# The marker locations in a physical map are known and the chromosome sizes and the
+#   total genome size will be calculated using those locations. The physical map will be
+#   converted into a genetic map using a constant recombination rate across the genome: 
+#   distances in Morgans will be calculated using the physical distances (in Mb).
+# Ne will be inferred using the recombination rates between loci and the weighted cuadratic
+#   correlations of alleles of loci pairs.
+# The historical Ne series will inferred by assuming that observed correlation between
+#   sites with recombination rate c reflects the Ne of 1/(2c) generations ago.
+#
+# INPUT PARAMETERS:
+# Type of genotyping data. 0:unphased diploids, 1:haploids, 2:phased diploids, 3:pseudohaploids:
+0
+# Rate of base call errors:
+0.00000
+# Number of chromosomes:
+12
+# Genome size in Morgans:
+21.8518
+# Genome size in Mb:
+704.90
+# Total number of individuals in the input file:
+9
+# Number of individuals included in the analysis:
+5
+# Average Number of individuals included in the analysis (corrected for missing genotypes):
+4.9999
+# Effective Number of individuals for correlations (corrected for missing genotypes):
+4.9998
+# Number of markers in the input file:
+822950
+# Number of SNPs included in the analysis (only polymorphic and with less than 20% missing data):
+87521
+# Proportion of missing data:
+0.00003148
+#
+# Estimated Fis value of the population (deviation from H-W proportions):
+-0.17225097
+# Heterozygosity observed in the sample (only polymorphic sites):
+0.33186207
+# Heterozygosity observed in the sample (all sites):
+0.03529364
+# Heterozygosity expected (H-W eq.) in the sample (only polymorphic sites):
+0.25966454
+# Heterozygosity expected (H-W eq.) in the sample (all sites):
+0.02761541

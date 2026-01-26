@@ -1,0 +1,9 @@
+Running GONE for par_pre with 7 individuals with recombination rate of 3.1...
+ Progress information stored at par_pre_GONE_progress.tmp
+ Check it by issuing 'cat par_pre_GONE_progress.tmp'
+ Loading data files
+ Reading the input file/s took 1.65 sec
+ Measuring d²
+ Estimating Ne
+Organizing Output Files...
+Completed GONE Analysis for par_pre
