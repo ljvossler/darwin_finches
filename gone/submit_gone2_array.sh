@@ -20,4 +20,4 @@ ARRAY_NAME=gone-r1.5-input_maf_0.05 # Be sure to rename this parameter if you wi
 POPPARAMS="$( sed "${SLURM_ARRAY_TASK_ID}q;d" GONEINPUTPOPS )"
 
 
-source run_gone2.sh -p $PARAMS -s $POPPARAMS -r $ARRAY_NAME
+source ../Genomics-Main/B_Phylogenetics/gone/run_gone2.sh -p $PARAMS -s $POPPARAMS -r $ARRAY_NAME
