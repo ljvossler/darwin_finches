@@ -1,9 +1,8 @@
 library(dplyr)
 library(ggplot2)
 
-out_path_pre = 'array_outputs/par_ped_test2_gone2_GONE2_Ne'
-#out_path_pre = 'array_outputs/gone_run4/cra_pre/gone_output/cra_pre_GONE2_Ne'
-out_path_post = 'array_outputs/par_vcf_test_gone2_GONE2_Ne'
+out_path_pre = '../gone_no_subsampling/for_pre/gone_output/for_pre_GONE2_Ne'
+out_path_post = '../gone_no_subsampling/for_post/gone_output/for_post_GONE2_Ne'
 title = 'PAR Effective Population Size'
 pop_color = "#A6C965" # par
 #pop_color = "#FF817E" # for

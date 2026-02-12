@@ -1,9 +1,0 @@
-Running GONE for for_post with 8 individuals with recombination rate of 3.1...
- Progress information stored at for_post_GONE_progress.tmp
- Check it by issuing 'cat for_post_GONE_progress.tmp'
- Loading data files
- Reading the input file/s took 1.68 sec
- Measuring d²
- Estimating Ne
-Organizing Output Files...
-Completed GONE Analysis for for_post

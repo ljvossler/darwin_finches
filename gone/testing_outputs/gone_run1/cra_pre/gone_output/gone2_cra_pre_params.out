@@ -1,9 +1,0 @@
-Running GONE for cra_pre with 5 individuals with recombination rate of 3.1...
- Progress information stored at cra_pre_GONE_progress.tmp
- Check it by issuing 'cat cra_pre_GONE_progress.tmp'
- Loading data files
- Reading the input file/s took 2.30 sec
- Measuring d²
- Estimating Ne
-Organizing Output Files...
-Completed GONE Analysis for cra_pre
