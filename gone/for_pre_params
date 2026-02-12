@@ -1,6 +1,6 @@
 VCFFILE=/xdisk/mcnew/finches/dannyjackson/finches/datafiles/vcf3/for_pre.phased.sorted.vcf.gz
 SCAFFOLD_LIST=${OUTDIR}/referencelists/SCAFFOLDS_subset2.txt
-OUTPREFIX=for_pre
+POPNAME=for_pre
 MAX_MISSING=1
 MAF=0.05
 
