@@ -13,9 +13,9 @@
 #SBATCH --array=1-6
 
 
-PARAMS=params_base.sh
+PARAMS=../params_base_df.sh
 
-ARRAY_NAME=gone_run1 # Be sure to rename this parameter if you wish to keep mulitple gone2 runs. Otherwise, all files in an existing array folder will be overwritten.
+ARRAY_NAME=gone-r1.5-input_maf_0.05 # Be sure to rename this parameter if you wish to keep mulitple gone2 runs. Otherwise, all files in an existing array folder will be overwritten.
 
 POPPARAMS="$( sed "${SLURM_ARRAY_TASK_ID}q;d" GONEINPUTPOPS )"
 
