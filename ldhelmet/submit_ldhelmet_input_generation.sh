@@ -19,4 +19,4 @@ VCFFILE=par_pre.recode.vcf
 CHR_LST=/xdisk/mcnew/finches/ljvossler/finches/SCAFFOLDS.txt
 
 
-source Genomics-Main/B_Phylogenetics/ldhelmet/ldhelmet_input_generation.sh -p $PARAMS -v $VCFFILE -c $CHR_LST
+source ../Genomics-Main/B_Phylogenetics/ldhelmet/ldhelmet_input_generation.sh -p $PARAMS -v $VCFFILE -c $CHR_LST
