@@ -11,7 +11,7 @@ WINDOW_SIZE=50 # often 50
 MUT_RATE=0.00102 # Population scaled mutation rate in units of 1/bp
 
 # Likelihood Lookup Table
-REC_RATE_GRID=0.0 0.1 10.0 1.0 100.0
+REC_RATE_GRID="0.0 0.1 10.0 1.0 100.0"
 
 # Pade
 PADE_COEF=12
