@@ -1,5 +1,7 @@
 # LDHelmet Parameters
 
+source ~/.bashrc
+
 module load micromamba
 micromamba activate ldhelmet_env # If set up using a conda/mamba environment
 source ../params_base_df.sh
