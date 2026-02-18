@@ -22,4 +22,4 @@ CHR_LST=/xdisk/mcnew/finches/ljvossler/finches/SCAFFOLDS.txt
 
 CHR="$( sed "${SLURM_ARRAY_TASK_ID}q;d" ${CHR_LST} )"
 
-source ../Genomics-Main/B_Phylogenetics/ldhelmet/ldhelmet_run_mcmc.sh -p $PARAMS -d par_pre.recode -c $CHR -f .snps
+source ../Genomics-Main/B_Phylogenetics/ldhelmet/ldhelmet_run_mcmc.sh -p $PARAMS -d par_pre.recode -c $CHR
