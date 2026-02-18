@@ -16,10 +16,10 @@
 
 PARAMS=params_ldhelmet.sh
 
-VCFFILE=par_pre.recode.vcf
+INPUTDIR=par_pre.recode
 
 CHR_LST=/xdisk/mcnew/finches/ljvossler/finches/SCAFFOLDS.txt
 
 CHR="$( sed "${SLURM_ARRAY_TASK_ID}q;d" ${CHR_LST} )"
 
-source ../Genomics-Main/B_Phylogenetics/ldhelmet/ldhelmet_run_mcmc.sh -p $PARAMS -d par_pre.recode -c $CHR
+source ../Genomics-Main/B_Phylogenetics/ldhelmet/ldhelmet_run_mcmc.sh -p $PARAMS -d $INPUTDIR -c $CHR

@@ -7,6 +7,7 @@ micromamba activate ldhelmet_env # If set up using a conda/mamba environment
 source ../params_base_df.sh
 
 INPUT_DIR=${OUTDIR}/datafiles/ldhelmet/round1
+RESULT_DIR=${OUTDIR}/analyses/ldhelmet/round1
 
 # General Parameters
 THREADS=12
