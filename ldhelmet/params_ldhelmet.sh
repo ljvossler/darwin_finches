@@ -6,8 +6,8 @@ module load boost
 module load gsl
 source ../params_base_df.sh
 
-INPUT_DIR=${OUTDIR}/datafiles/ldhelmet
-RESULT_DIR=${OUTDIR}/analyses/ldhelmet
+INPUT_DIR=${OUTDIR}/datafiles/ldhelmet/round1
+RESULT_DIR=${OUTDIR}/analyses/ldhelmet/round1
 
 # General Parameters
 THREADS=12
