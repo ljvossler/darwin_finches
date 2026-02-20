@@ -1,13 +1,13 @@
+#!/bin/bash 
+
 # LDHelmet Parameters
 
-source ~/.bashrc
+module load boost
+module load gsl
+source ../../../params_base.sh
 
-module load micromamba
-micromamba activate ldhelmet_env # If set up using a conda/mamba environment
-source ../params_base_df.sh
-
-INPUT_DIR=${OUTDIR}/datafiles/ldhelmet/round1
-RESULT_DIR=${OUTDIR}/analyses/ldhelmet/round1
+INPUT_DIR=${OUTDIR}/datafiles/ldhelmet
+RESULT_DIR=${OUTDIR}/analyses/ldhelmet
 
 # General Parameters
 THREADS=12
@@ -22,8 +22,8 @@ PADE_COEF=12
 DEFECT=40
 
 # MCMC Analysis
-BURN_IN=100000
+BURN_IN=10000
 BLOCK_PENALTY=50
-ITERATIONS=1000000
+ITERATIONS=100000
 MUT_MATRIX= # Optional, leave empty if not using a custom mutation matrix. If using, provide the path to the mutation matrix file.
 ANC_PRIOR= # Optional, leave empty if not using ancestral allele priors. If using, provide the path to the ancestral allele prior file. 
