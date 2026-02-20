@@ -4,7 +4,7 @@
 
 module load boost
 module load gsl
-source ../../../params_base.sh
+source ../params_base_df.sh
 
 INPUT_DIR=${OUTDIR}/datafiles/ldhelmet
 RESULT_DIR=${OUTDIR}/analyses/ldhelmet
