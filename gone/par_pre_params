@@ -1,4 +1,4 @@
-VCFFILE==/xdisk/mcnew/finches/ljvossler/finches/datafiles/beagle_phased_vcfs/par_pre.vcf.gz.recode.vcf
+VCFFILE=/xdisk/mcnew/finches/ljvossler/finches/datafiles/beagle_phased_vcfs/par_pre.vcf.gz.recode.vcf
 SCAFFOLD_LIST=${OUTDIR}/referencelists/SCAFFOLDS_subset2.txt
 POPNAME=par_pre
 MAX_MISSING=1
