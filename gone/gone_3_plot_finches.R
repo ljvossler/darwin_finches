@@ -17,8 +17,8 @@ option_list = list(
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
 
-out_path_pre = paste0(c(opt$directory, '/', opt$popcode, '_pre/', opt$popcode, '_pre.ped_GONE2_Ne'), collapse = '')
-out_path_post = paste0(c(opt$directory, '/', opt$popcode, '_post/', opt$popcode, '_post.ped_GONE2_Ne'), collapse = '')
+out_path_pre = paste0(c(opt$directory, '/', opt$popcode, '_pre/', opt$popcode, '_pre_GONE2_Ne'), collapse = '')
+out_path_post = paste0(c(opt$directory, '/', opt$popcode, '_post/', opt$popcode, '_post_GONE2_Ne'), collapse = '')
 title = opt$title
 pop_color = opt$color
 

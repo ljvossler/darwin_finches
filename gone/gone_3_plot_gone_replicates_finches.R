@@ -27,8 +27,8 @@ print(opt$directory)
 out_files_pre=c()
 out_files_post=c()
 for (i in 1:opt$num_reps) {
-  out_files_pre <- append(out_files_pre, paste(c(opt$directory, '/rep', i, '/', opt$popcode, '_pre/', opt$popcode, '_pre.ped_GONE2_Ne'), collapse = ''))
-  out_files_post <- append(out_files_post, paste(c(opt$directory, '/rep', i, '/', opt$popcode, '_post/', opt$popcode, '_post.ped_GONE2_Ne'), collapse = ''))
+  out_files_pre <- append(out_files_pre, paste(c(opt$directory, '/rep', i, '/', opt$popcode, '_pre/', opt$popcode, '_pre_GONE2_Ne'), collapse = ''))
+  out_files_post <- append(out_files_post, paste(c(opt$directory, '/rep', i, '/', opt$popcode, '_post/', opt$popcode, '_post_GONE2_Ne'), collapse = ''))
 }
 
 print(out_files_post)
