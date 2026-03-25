@@ -20,7 +20,7 @@ PLOT_REPLICATES=false
 NUM_REPLICATES=10
 
 # Parse command-line arguments
-while getopts d:p:t:c:n:r option; do
+while getopts d:s:t:c:n:r option; do
     case "${option}" in
         d) FILEDIR=${OPTARG};;
         p) POPCODE=${OPTARG};;
@@ -35,8 +35,8 @@ done
 if [ "$PLOT_REPLICATES" = true ]; then
     echo "Plotting Replicate GONE outputs for ${POPCODE}..."
     echo "Ensure that all replicate GONE outputs for ${POPCODE} are in the directory: ${FILEDIR}"
-    Rscript ${SCRIPTDIR}/gone/plot_gone2_replicates.R -d ${FILEDIR} -p ${POPCODE} -t "${TITLE}" -c ${COLOR} -n ${NUM_REPLICATES}
+    Rscript /xdisk/mcnew/finches/ljvossler/finches/darwin_finches/gone/plot_gone2_replicates.R -d ${FILEDIR} -p ${POPCODE} -t "${TITLE}" -c ${COLOR} -n ${NUM_REPLICATES}
     else
     echo "Plotting single GONE output for ${POPCODE}..."
-    Rscript ${SCRIPTDIR}/gone/gone_3_plot.R -d ${FILEDIR} -p ${POPCODE} -t "${TITLE}" -c ${COLOR}
+    Rscript /xdisk/mcnew/finches/ljvossler/finches/darwin_finches/gone/gone_3_plot.R -d ${FILEDIR} -p ${POPCODE} -t "${TITLE}" -c ${COLOR}
 fi
