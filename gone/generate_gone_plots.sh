@@ -20,7 +20,7 @@ PLOT_REPLICATES=false
 NUM_REPLICATES=10
 
 # Parse command-line arguments
-while getopts d:s:t:c:n:r option; do
+while getopts d:p:t:c:n:r option; do
     case "${option}" in
         d) FILEDIR=${OPTARG};;
         p) POPCODE=${OPTARG};;
