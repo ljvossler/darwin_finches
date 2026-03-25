@@ -35,8 +35,8 @@ done
 if [ "$PLOT_REPLICATES" = true ]; then
     echo "Plotting Replicate GONE outputs for ${POPCODE}..."
     echo "Ensure that all replicate GONE outputs for ${POPCODE} are in the directory: ${FILEDIR}"
-    Rscript ./plot_gone2_replicates.R -d ${FILEDIR} -p ${POPCODE} -t "${TITLE}" -c ${COLOR} -n ${NUM_REPLICATES}
+    Rscript ${SCRIPTDIR}/gone/plot_gone2_replicates.R -d ${FILEDIR} -p ${POPCODE} -t "${TITLE}" -c ${COLOR} -n ${NUM_REPLICATES}
     else
     echo "Plotting single GONE output for ${POPCODE}..."
-    Rscript ./gone_3_plot.R -d ${FILEDIR} -p ${POPCODE} -t "${TITLE}" -c ${COLOR}
+    Rscript ${SCRIPTDIR}/gone/gone_3_plot.R -d ${FILEDIR} -p ${POPCODE} -t "${TITLE}" -c ${COLOR}
 fi
