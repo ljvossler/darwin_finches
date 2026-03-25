@@ -43,7 +43,8 @@ plot <- df_full %>%
   geom_point() +
   scale_color_manual(values = color_codes, name='Time') #+coord_cartesian(ylim = c(0,20))
 
-ggsave(filename = paste0(opt$popcode, '_gone_plot.pdf'), plot = plot, device = 'pdf', width = 8, height = 5)
+plot_fname = paste(c(opt$directory, '/', opt$popcode, '_gone_plot.pdf'), collapse = '')
+ggsave(filename = plot_fname, plot = plot, device = 'pdf', width = 8, height = 5)
 
 print_parts = c('Saved ', opt$popcode, ' gone plot in ', 'placeholder directory')
 print(paste(print_parts, collapse = ''))
