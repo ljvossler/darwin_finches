@@ -22,11 +22,11 @@ opt = parse_args(opt_parser);
 
 # State output file paths and plot attributes
 
-opt$directory='gone-r1.8-maf-0.01'
-opt$popcode='cra'
-opt$color="#4EAFAF"
-opt$title='placeholder'
-opt$num_reps=4
+#opt$directory='gone-r1.8-maf-0.01'
+#opt$popcode='cra'
+#opt$color="#4EAFAF"
+#opt$title='placeholder'
+#opt$num_reps=4
 
 
 print(opt$directory)
