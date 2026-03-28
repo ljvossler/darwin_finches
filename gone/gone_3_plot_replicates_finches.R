@@ -76,5 +76,5 @@ plot <- df_full %>%
 plot_fname = paste(c(opt$directory, '/', opt$popcode, '_gone_plot_replicates.pdf'), collapse = '')
 ggsave(filename = plot_fname, plot = plot, device = 'pdf', width = 8, height = 5)
 
-print_msg = c('Saved ', opt$popcode, ' replicate gone plot in ', 'placeholder directory')
+print_msg = c('Saved ', opt$popcode, ' replicate gone plot in ', opt$directory, '/', opt$popcode)
 print(paste(print_msg, collapse = ''))
