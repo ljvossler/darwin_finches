@@ -46,5 +46,5 @@ plot <- df_full %>%
 plot_fname = paste(c(opt$directory, '/', opt$popcode, '_gone_plot.pdf'), collapse = '')
 ggsave(filename = plot_fname, plot = plot, device = 'pdf', width = 8, height = 5)
 
-print_parts = c('Saved ', opt$popcode, ' gone plot in ', opt$directory, '/', opt$popcode)
+print_parts = c('Saved ', opt$popcode, ' gone plot in ', opt$directory)
 print(paste(print_parts, collapse = ''))
