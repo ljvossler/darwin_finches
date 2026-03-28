@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
-library(plotly)
 library(optparse)
+library(plotly) # You can load plotly if running locally. This library has difficultly loading in HPC environment. This can let you highlight replicate lines to see which ones are being weird or interesting.
 
 # Define options
 option_list = list(
@@ -71,7 +71,7 @@ plot <- df_full %>%
   labs(title = title, y='Estimated Ne', x='Generations') +
   theme_bw() +
   theme(title=element_text(size=16), axis.title = element_text(size=14), legend.title = element_text(size=14))
-plotly::ggplotly(plot, tooltip = "text")
+#plotly::ggplotly(plot, tooltip = "text")
 
 plot_fname = paste(c(opt$directory, '/', opt$popcode, '_gone_plot_replicates.pdf'), collapse = '')
 ggsave(filename = plot_fname, plot = plot, device = 'pdf', width = 8, height = 5)
