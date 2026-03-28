@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
 library(optparse)
-library(plotly) # You can load plotly if running locally. This library has difficultly loading in HPC environment. This can let you highlight replicate lines to see which ones are being weird or interesting.
+#library(plotly) You can load plotly if running locally. This library has difficultly loading in HPC environment. This can let you highlight replicate lines to see which ones are being weird or interesting.
 
 # Define options
 option_list = list(
