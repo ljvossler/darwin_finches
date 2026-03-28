@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
 library(optparse)
-#library(plotly) You can load plotly if running locally. This library has difficultly loading in HPC environment. This can let you highlight replicate lines to see which ones are being weird or interesting.
+#library(plotly) #You can load plotly if running locally. This library has difficultly loading in HPC environment. This can let you highlight replicate lines to see which ones are being weird or interesting.
 
 # Define options
 option_list = list(
@@ -21,6 +21,13 @@ opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
 
 # State output file paths and plot attributes
+
+opt$directory='gone-r1.8-maf-0.01'
+opt$popcode='cra'
+opt$color="#4EAFAF"
+opt$title='placeholder'
+opt$num_reps=4
+
 
 print(opt$directory)
 
@@ -43,12 +50,12 @@ pop_color = opt$color
 # Function to read in and format output files into dfs
 read_df <- function(fpath, time_period) {
   df <- read.csv(fpath, sep = '\t')
-  df$rep_fname <- basename(fpath)
   df <- df %>% mutate(Population=time_period)
+  df <- df %>% mutate(rep=as.factor(strsplit(fpath, split = '/')[[1]][2]))
   return(df)
 }
 
-# Get combined pre_dfa
+# Get combined pre_df
 pre_df_lst <- lapply(out_files_pre, read_df, time_period='Pre-Philornis')
 pre_dfs <- do.call(rbind, pre_df_lst)
 
@@ -65,8 +72,10 @@ df_full <- df_full %>%
 color_codes <- c('Pre-Philornis'='gray41', 'Post-Philornis'=pop_color)
 
 plot <- df_full %>%
-  ggplot(aes(x=Generation, y=Ne_diploids, color = Population, group=rep_fname, text=rep_fname)) +
-  geom_line(linewidth=1) +
+  ggplot(aes(x=Generation, y=Ne_diploids, color = Population, text=rep)) +
+  geom_step(linewidth=1) +
+  #geom_point() +
+  #geom_line(linewidth=1) +
   scale_color_manual(values = color_codes, name='Population') +
   labs(title = title, y='Estimated Ne', x='Generations') +
   theme_bw() +
