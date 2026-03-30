@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
 library(optparse)
-#library(plotly) #You can load plotly if running locally. This library has difficultly loading in HPC environment. This can let you highlight replicate lines to see which ones are being weird or interesting.
+library(plotly) #You can load plotly if running locally. This library has difficultly loading in HPC environment. This can let you highlight replicate lines to see which ones are being weird or interesting.
 
 # Define options
 option_list = list(
@@ -22,11 +22,11 @@ opt = parse_args(opt_parser);
 
 # State output file paths and plot attributes
 
-#opt$directory='gone-r1.8-maf-0.01'
-#opt$popcode='cra'
-#opt$color="#4EAFAF"
-#opt$title='placeholder'
-#opt$num_reps=4
+opt$directory='gone-r1.8-maf-0.01'
+opt$popcode='par'
+opt$color=#A6C965"
+opt$title='Small Tree Finch Effective Population Size'
+opt$num_reps=5
 
 
 print(opt$directory)
@@ -80,7 +80,9 @@ plot <- df_full %>%
   labs(title = title, y='Estimated Ne', x='Generations') +
   theme_bw() +
   theme(title=element_text(size=16), axis.title = element_text(size=14), legend.title = element_text(size=14))
-#plotly::ggplotly(plot, tooltip = "text")
+plotly::ggplotly(plot, tooltip = "text")
+
+plot
 
 plot_fname = paste(c(opt$directory, '/', opt$popcode, '_gone_plot_replicates.pdf'), collapse = '')
 ggsave(filename = plot_fname, plot = plot, device = 'pdf', width = 8, height = 5)
