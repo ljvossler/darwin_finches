@@ -22,11 +22,11 @@ opt = parse_args(opt_parser);
 
 # State output file paths and plot attributes
 
-opt$directory='gone-r1.8-maf-0.01'
-opt$popcode='par'
-opt$color=#A6C965"
-opt$title='Small Tree Finch Effective Population Size'
-opt$num_reps=5
+opt$directory='gone-r1.8-maf-0.01-nosubsample'
+opt$popcode='for'
+opt$color="#4EAFAF"
+opt$title='Effective Population Size'
+opt$num_reps=2
 
 
 print(opt$directory)

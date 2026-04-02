@@ -17,6 +17,11 @@ option_list = list(
 opt_parser = OptionParser(option_list=option_list);
 opt = parse_args(opt_parser);
 
+opt$directory='gone-r1.8-maf-0.01-nosubsample-rep1'
+opt$popcode='cra'
+opt$color="#4EAFAF"
+opt$title='Vegetarian Finch Effective Population Size'
+
 out_path_pre = paste0(c(opt$directory, '/', opt$popcode, '_pre/', opt$popcode, '_pre_GONE2_Ne'), collapse = '')
 out_path_post = paste0(c(opt$directory, '/', opt$popcode, '_post/', opt$popcode, '_post_GONE2_Ne'), collapse = '')
 title = opt$title
@@ -40,7 +45,7 @@ color_codes <- c('Pre-Philornis'='gray41', 'Post-Philornis'=pop_color)
 
 plot <- df_full %>%
   ggplot(aes(x=Generation, y=Ne_diploids, color = time)) +
-  geom_point() +
+  geom_step(linewidth=1) +
   scale_color_manual(values = color_codes, name='Time') #+coord_cartesian(ylim = c(0,20))
 
 plot_fname = paste(c(opt$directory, '/', opt$popcode, '_gone_plot.pdf'), collapse = '')
